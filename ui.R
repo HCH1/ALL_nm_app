@@ -26,10 +26,12 @@ tags$a(href="https://text-compare.com/", "(2) Suggest to check text_diff"),
 tags$br(),
 tags$br(),
 
-tags$a(href="https://drive.google.com/open?id=1MKb-9hGF7S4KKJ16Cv54CuJrdXpNd_6G", 
-"(3) Upload to google drive")
+tags$a(href="https://drive.google.com/open?id=1MKb-9hGF7S4KKJ16Cv54CuJrdXpNd_6G", "(3) Upload to google drive"),
 
-      #      downloadButton("downloadData", "Download")
+tags$br(),
+tags$br(),
+
+            downloadButton("downloadData", "Download")
     ),
     
     mainPanel(
