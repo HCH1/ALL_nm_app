@@ -42,7 +42,18 @@ colnames(last_row) <- colnames(lpo2_22fdx_act_cate_dedup)
 allowlayer1 <- rbind(lpo2_22fdx_act_cate_dedup, last_row)
 ###write.csv(x = allowlayer1, row.names = FALSE, file = paste(format(Sys.time(), "%Y%m%d_%H"), "_allow_layer_ans.csv", sep = "") )
 allowlayer1
-##
+####
 })
-##
+####https://shiny.rstudio.com/articles/download.html
+  # Downloadable csv of selected dataset ----
+  output$downloadData <- downloadHandler(
+    filename = function() {
+	#https://shiny.rstudio.com/reference/shiny/0.14/downloadHandler.html
+      paste("data-", Sys.Date(), ".csv", sep = "")
+    },
+    content = function(file) {
+      write.csv(output$DRC_grep(), file, row.names = FALSE)
+    }
+  )
+####
 }
